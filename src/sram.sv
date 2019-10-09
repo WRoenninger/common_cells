@@ -42,7 +42,7 @@ module sram #(
       end else begin
         for (int unsigned i = 0; i < BE_WIDTH; i++) begin
           if (be_i[i]) begin
-            ram[addr_i][i*BYTE_WIDTH:BYTE_WIDTH] <= wdata_i[i*BYTE_WIDTH:BYTE_WIDTH];
+            ram[addr_i][i*BYTE_WIDTH+:BYTE_WIDTH] <= wdata_i[i*BYTE_WIDTH+:BYTE_WIDTH];
           end
         end
       end
